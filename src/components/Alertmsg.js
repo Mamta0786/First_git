@@ -9,7 +9,6 @@ export default function Alertmsg(props) {
       props.alert &&
     <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
           <strong>{capitalize(props.alert.type)}! {props.alert.msg }</strong>
-      
     </div>
   );
 }
