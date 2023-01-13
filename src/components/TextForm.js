@@ -48,16 +48,16 @@ export default function TextForm(props) {
       <div className="container">
 
             <button className="btn btn-primary mx-1 my-1" onClick={convertUpCase}>
-              Converting into UpperCase
+              Convert into UpperCase
             </button>
 
             <button className="btn btn-primary mx-1 my-1" onClick={convertLoCase}>
-              Converting into LowerCase
+              Convert into LowerCase
             </button>
       </div>
       <div className="container my-3">
         <p>
-          {wordCount(text)} word and {text.length} character.
+          {wordCount(text)} words and {text.length} character.
         </p>
         <h2>Preview</h2>
         <p>
