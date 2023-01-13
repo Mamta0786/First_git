@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alertmsg from "./components/Alertmsg";
-import About from "./components/About";
-// import { Switch } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import About from "./components/About";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -36,16 +35,22 @@ function App() {
   };
 
   return (
-    <Router>
-      <div>
-        <Navbar title="TextUtils" mode1={mode} change_Mode={changeMode} />
+    <>
+      <Navbar title="TextUtils" mode1={mode} change_Mode={changeMode} />
         <Alertmsg alert={alert} />
-        <Routes>
-          <Route path="/" element={<TextForm mode1={mode} showAlert={showAlert} />} />
-          <Route path="/about" element={<About mode1={mode} />} />
-        </Routes>
-      </div>
-    </Router>
+        <TextForm mode1={mode} showAlert={showAlert} />
+    </>
+    // <Router>
+    //   <div>
+    //     <Navbar title="TextUtils" mode1={mode} change_Mode={changeMode} />
+    //     <Alertmsg alert={alert} />
+    //     <TextForm mode1={mode} showAlert={showAlert} />
+    //     <Routes>
+    //       <Route exact path="/" element={<TextForm mode1={mode} showAlert={showAlert} />} />
+    //       <Route exact path="/about" element={<About mode1={mode} />} />
+    //     </Routes>
+    //   </div>
+    // </Router>
   );
 }
 
